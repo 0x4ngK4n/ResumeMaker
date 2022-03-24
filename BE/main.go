@@ -10,7 +10,8 @@ func main() {
 
 	r.GET("/getdata", resumemaker.GetData)
 	r.POST("/updatedata", resumemaker.UpdateData)
-
+	// testing SPA deploy
+	// r.Use(spa.Middleware("/index.html", "../FE/index.html"))
 	r.Run()
 
 	//ToDo: Open Browser

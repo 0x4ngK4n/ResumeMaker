@@ -73,7 +73,7 @@ module.exports = {
                 m("div", {class: "row bg-dark text-white"}, [
                     // Footer element
                     m("footer", {class: "pb-2 pt-2 col-sm-12"}, [
-                        m("p", {class: "font-italic font-weight-light text-right"}, "built via resume maker"),
+                        m("p", {class: "font-italic font-weight-light text-right"}, "built via resume maker " + myData.myDataJson.Version),
                     ]),
                 ]),
             ]),

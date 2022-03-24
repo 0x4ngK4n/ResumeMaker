@@ -20,6 +20,7 @@ type bioData struct {
 	TechnicalSkills []map[string]interface{} `json: "technicalskills"`
 	Certifications  []map[string]string      `json: "certifications"`
 	Experiences     []map[string]interface{} `json: "experiences"`
+	Version         string                   `json: "version"`
 }
 
 type myData struct {
