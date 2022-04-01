@@ -1,7 +1,7 @@
 data:
   name: Angkan Chanda
   title: Senior Red Team Engineer
-  aboutme: I am an evolving red teamer. aiming to be better!
+  aboutme: I am an evolving red teamer. aiming to be better and better, everyday!
   details:
   - detailHref: https://github.com/0x4ngk4n
     detailIcon: nav-link text-dark font-weight-bold fa fa-github

@@ -148,11 +148,23 @@ func GetNavData() {
 	//ToDo
 }
 
+func UpdateNavData() {
+
+}
+
 func GetAsideData() {
 	//ToDo
 }
 
+func UpdateAsideData() {
+	//ToDo
+}
+
 func GetSectionData() {
+	//ToDo
+}
+
+func UpdateSectionData() {
 	//ToDo
 }
 
