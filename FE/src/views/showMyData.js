@@ -1,5 +1,5 @@
 var m = require("mithril")
-const { myDataJson } = require("../models/queryData")
+// const { myDataJson } = require("../models/queryData")
 var myData = require("../models/queryData")
 
 
@@ -12,11 +12,13 @@ module.exports = {
             m("div", {class: "container-fluid"}, [
                 m("div", {class: "row"}, [
                     // Header element
-                    m("header",{class: "mb-0 pb-0 col-sm-12 bg-primary text-white jumbotron"},[ //Applied the mb pb classes here to trim the margin
-                        m("h1", myData.myDataJson.Name),
-                        m("h4", myData.myDataJson.Title),
-                        m("hr"),
-                        m("h5", myData.myDataJson.AboutMe),
+                    m("header",{class: "mb-0 pb-0 col-sm-12 bg-primary text-white jumbotron"},[ // Applied the mb pb classes here to trim the margin
+                        m(m.route.Link, {href: "/editHeader", class: "text-dark"}, [
+                            m("h1", myData.myDataJson.Name),
+                            m("h4", myData.myDataJson.Title),
+                            m("hr"),
+                            m("h5", myData.myDataJson.AboutMe),
+                        ])
                     ]),
                 ]),
                 m("div", {class: "pt-2 pb-2 row justify-content-center bg-warning text-white"}, [

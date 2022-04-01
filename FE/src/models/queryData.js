@@ -13,5 +13,27 @@ var getMyData = {
         })
         )
     },
+
+    resumeHeaderData: {},
+    getMyHeaderData: function() {
+        return(m.request({
+            method: "GET",
+            url: "http://localhost:8080/getheader",
+            withCredentials: false,
+        }))
+        .then(function(headerResult){
+            getMyData.resumeHeaderData = headerResult
+            //console.log(getMyData.resumeHeaderData)
+        })
+    },
+    
+    save: function() {
+        return m.request({
+            method: "POST",
+            url: "http://localhost:8080/updateheader",
+            body: getMyData.resumeHeaderData,
+            withCredentials: false,
+        })
+    }
 }
 module.exports = getMyData

@@ -1,100 +1,100 @@
 data:
   name: Angkan Chanda
   title: Senior Red Team Engineer
-  aboutme: I am an evolving red teamer!
+  aboutme: I am an evolving red teamer. aiming to be better!
   details:
-    - detailHref: https://github.com/0x4ngk4n
-      detailValue: https://github.com/0x4ngk4n
-      detailIcon: nav-link text-dark font-weight-bold fa fa-github
-    - detailHref: mailto:angkan0889@gmail.com
-      detailValue: angkan0889@gmail.com
-      detailIcon: nav-link text-dark font-weight-bold fa fa-envelope
-    - detailHref: https://www.google.com/maps/place/Kolkata,+West+Bengal
-      detailValue: Kolkata, India
-      detailIcon: nav-link text-dark font-weight-bold fa fa-map-marker
-    - detailHref: sms:+91-9163458227
-      detailValue: +91-9163458227
-      detailIcon: nav-link text-dark font-weight-bold fa fa-phone
+  - detailHref: https://github.com/0x4ngk4n
+    detailIcon: nav-link text-dark font-weight-bold fa fa-github
+    detailValue: https://github.com/0x4ngk4n
+  - detailHref: mailto:angkan0889@gmail.com
+    detailIcon: nav-link text-dark font-weight-bold fa fa-envelope
+    detailValue: angkan0889@gmail.com
+  - detailHref: https://www.google.com/maps/place/Kolkata,+West+Bengal
+    detailIcon: nav-link text-dark font-weight-bold fa fa-map-marker
+    detailValue: Kolkata, India
+  - detailHref: sms:+91-9163458227
+    detailIcon: nav-link text-dark font-weight-bold fa fa-phone
+    detailValue: +91-9163458227
   technicalskills:
-    - skillName: Web Assessment
-      skillValue: 7
-    - skillName: Infrastructure Assessments
-      skillValue: 5
-    - skillName: Mobile Assessments
-      skillValue: 5
-    - skillName: Source Code Analysis
-      skillValue: 5
-    - skillName: Reverse Enginnering
-      skillValue: 3
+  - skillName: Web Assessment
+    skillValue: 7
+  - skillName: Infrastructure Assessments
+    skillValue: 5
+  - skillName: Mobile Assessments
+    skillValue: 5
+  - skillName: Source Code Analysis
+    skillValue: 5
+  - skillName: Reverse Enginnering
+    skillValue: 3
   certifications:
   - certificateName: OSCP
   - certificateName: AWS
   experiences:
-    - companydesignation: Systems Engineer
-      companyduration: August,2012 - October,2014
-      companyduties:
-      - I was part of Juniper Technical Assistance Centre (J-TAC).
-      - I assisted customers with various networking related technical issues involving
-        the Juniper SRX series firewalls.
-      - As part of my internal project, I developed a web application which interacted
-        with lab environment, allowing engineers to reserve devices for a specific
-        time period to replicate customer issues.
-      companylocation: Pune, India
-      companyname: Infosys India Pvt. Ltd.
-    - companydesignation: Technical Solutions Engineer - Media Delivery
-      companyduration: January,2015 - November,2015
-      companyduties:
-      - I was tasked to solve time-bound, challenging issues pertaining to media delivery
-        systems.
-      - I assisted in isolating the root cause of a technical issue & communicated
-        the same to the end customers.
-      - During my tenure in this role, I developed good foundation in Linux operating
-        systems and wrote various scripts to automate everyday tasks using Python
-        and bash.
-      companylocation: Bangalore, India
-      companyname: Akamai India Pvt. Ltd.
-    - companydesignation: Technical Support Engineer - Private Cloud Platform (PCP)
-      companyduration: December,2015 - January,2017
-      companyduties:
-      - I assisted to remediate technical issues related to Qualys's vulnerability
-        management module.
-      - I was allocated critical customers' accounts and helped remediate various
-        issues involved with Qualys' Private Cloud Platform.
-      - Provided best practices knowledge with respect to Qualys' product and develop
-        a rapport with the customers' to be the reliable technical point of contact.
-      companylocation: Pune, India
-      companyname: Qualys India Pvt. Ltd.
-    - companydesignation: Senior Security Analyst
-      companyduration: January,2017 - June,2018
-      companyduties:
-      - As part of my role, I conducted automated & manual security assessment of
-        web, infrastructure & IoT applications for shipping & aviation industries.
-      - I led critical time-bound projects with customers to conduct network security
-        assessments using Tenable Security Centre and presented the data to customers
-        to highlight security risks.
-      - Provided best practices knowledge with respect to Qualys' product and develop
-        a rapport with the customers' to be the reliable technical point of contact.
-      companylocation: Pune, India
-      companyname: SecurView Pvt. Ltd.
-    - companydesignation: Senior Security Consultant
-      companyduration: July,2018 - July,2021
-      companyduties:
-      - I assisted customers to uncover security vulnerabilities in their
-        applications & present detailed reports to understand the impact & remediate
-        the security risks.
-      - Liaised with customers to understand their security requirements,
-        configure appropriate scan policies and devise risk remediation strategy based
-        on results to effectively improve the security posture of the organization.
-      - As part of my duties, I used to scope a security engagement's entire lifecycle
-        (planning, execution & reporting) & lead those engagements independently.
-      companylocation: Singapore
-      companyname: SEC-Consult Pte. Ltd.
-    - companydesignation: Senior Red Team Security Engineer
-      companyduration: August,2021 - Present
-      companyduties:
-      - Evolved from a penetration tester to a red teamer.
-      - Assisted on a variety of red teaming and purple teaming engagements.
-      - Automated a variety of tasks and developed internal offensive-security tooling.
-      companylocation: Kolkata, India
-      companyname: Snowflake, Inc.
+  - companydesignation: Systems Engineer
+    companyduration: August,2012 - October,2014
+    companyduties:
+    - I was part of Juniper Technical Assistance Centre (J-TAC).
+    - I assisted customers with various networking related technical issues involving
+      the Juniper SRX series firewalls.
+    - As part of my internal project, I developed a web application which interacted
+      with lab environment, allowing engineers to reserve devices for a specific time
+      period to replicate customer issues.
+    companylocation: Pune, India
+    companyname: Infosys India Pvt. Ltd.
+  - companydesignation: Technical Solutions Engineer - Media Delivery
+    companyduration: January,2015 - November,2015
+    companyduties:
+    - I was tasked to solve time-bound, challenging issues pertaining to media delivery
+      systems.
+    - I assisted in isolating the root cause of a technical issue & communicated the
+      same to the end customers.
+    - During my tenure in this role, I developed good foundation in Linux operating
+      systems and wrote various scripts to automate everyday tasks using Python and
+      bash.
+    companylocation: Bangalore, India
+    companyname: Akamai India Pvt. Ltd.
+  - companydesignation: Technical Support Engineer - Private Cloud Platform (PCP)
+    companyduration: December,2015 - January,2017
+    companyduties:
+    - I assisted to remediate technical issues related to Qualys's vulnerability management
+      module.
+    - I was allocated critical customers' accounts and helped remediate various issues
+      involved with Qualys' Private Cloud Platform.
+    - Provided best practices knowledge with respect to Qualys' product and develop
+      a rapport with the customers' to be the reliable technical point of contact.
+    companylocation: Pune, India
+    companyname: Qualys India Pvt. Ltd.
+  - companydesignation: Senior Security Analyst
+    companyduration: January,2017 - June,2018
+    companyduties:
+    - As part of my role, I conducted automated & manual security assessment of web,
+      infrastructure & IoT applications for shipping & aviation industries.
+    - I led critical time-bound projects with customers to conduct network security
+      assessments using Tenable Security Centre and presented the data to customers
+      to highlight security risks.
+    - Provided best practices knowledge with respect to Qualys' product and develop
+      a rapport with the customers' to be the reliable technical point of contact.
+    companylocation: Pune, India
+    companyname: SecurView Pvt. Ltd.
+  - companydesignation: Senior Security Consultant
+    companyduration: July,2018 - July,2021
+    companyduties:
+    - I assisted customers to uncover security vulnerabilities in their applications
+      & present detailed reports to understand the impact & remediate the security
+      risks.
+    - Liaised with customers to understand their security requirements, configure
+      appropriate scan policies and devise risk remediation strategy based on results
+      to effectively improve the security posture of the organization.
+    - As part of my duties, I used to scope a security engagement's entire lifecycle
+      (planning, execution & reporting) & lead those engagements independently.
+    companylocation: Singapore
+    companyname: SEC-Consult Pte. Ltd.
+  - companydesignation: Senior Red Team Security Engineer
+    companyduration: August,2021 - Present
+    companyduties:
+    - Evolved from a penetration tester to a red teamer.
+    - Assisted on a variety of red teaming and purple teaming engagements.
+    - Automated a variety of tasks and developed internal offensive-security tooling.
+    companylocation: Kolkata, India
+    companyname: Snowflake, Inc.
   version: v0.0.1
