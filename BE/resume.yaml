@@ -30,52 +30,13 @@ data:
   - certificateName: OSCP
   - certificateName: AWS
   experiences:
-  - companydesignation: Systems Engineer
-    companyduration: August,2012 - October,2014
-    companyduties:
-    - I was part of Juniper Technical Assistance Centre (J-TAC).
-    - I assisted customers with various networking related technical issues involving
-      the Juniper SRX series firewalls.
-    - As part of my internal project, I developed a web application which interacted
-      with lab environment, allowing engineers to reserve devices for a specific time
-      period to replicate customer issues.
-    companylocation: Pune, India
-    companyname: Infosys India Pvt. Ltd.
-  - companydesignation: Technical Solutions Engineer - Media Delivery
-    companyduration: January,2015 - November,2015
-    companyduties:
-    - I was tasked to solve time-bound, challenging issues pertaining to media delivery
-      systems.
-    - I assisted in isolating the root cause of a technical issue & communicated the
-      same to the end customers.
-    - During my tenure in this role, I developed good foundation in Linux operating
-      systems and wrote various scripts to automate everyday tasks using Python and
-      bash.
-    companylocation: Bangalore, India
-    companyname: Akamai India Pvt. Ltd.
-  - companydesignation: Technical Support Engineer - Private Cloud Platform (PCP)
-    companyduration: December,2015 - January,2017
-    companyduties:
-    - I assisted to remediate technical issues related to Qualys's vulnerability management
-      module.
-    - I was allocated critical customers' accounts and helped remediate various issues
-      involved with Qualys' Private Cloud Platform.
-    - Provided best practices knowledge with respect to Qualys' product and develop
-      a rapport with the customers' to be the reliable technical point of contact.
-    companylocation: Pune, India
-    companyname: Qualys India Pvt. Ltd.
-  - companydesignation: Senior Security Analyst
-    companyduration: January,2017 - June,2018
-    companyduties:
-    - As part of my role, I conducted automated & manual security assessment of web,
-      infrastructure & IoT applications for shipping & aviation industries.
-    - I led critical time-bound projects with customers to conduct network security
-      assessments using Tenable Security Centre and presented the data to customers
-      to highlight security risks.
-    - Provided best practices knowledge with respect to Qualys' product and develop
-      a rapport with the customers' to be the reliable technical point of contact.
-    companylocation: Pune, India
-    companyname: SecurView Pvt. Ltd.
+  - companydesignation: Senior Red Team Security Engineer
+    companyduration: August,2021 - Present
+    companyduties: Evolved from a penetration tester to a red teamer under tutelage
+      of a God. Assisted on a variety of red teaming and purple teaming engagements.,Automated
+      a variety of tasks and developed internal offensive-security tooling.
+    companylocation: Kolkata, India
+    companyname: Snowflake, Inc.
   - companydesignation: Senior Security Consultant
     companyduration: July,2018 - July,2021
     companyduties:
@@ -89,12 +50,50 @@ data:
       (planning, execution & reporting) & lead those engagements independently.
     companylocation: Singapore
     companyname: SEC-Consult Pte. Ltd.
-  - companydesignation: Senior Red Team Security Engineer
-    companyduration: August,2021 - Present
+  - companydesignation: Senior Security Analyst
+    companyduration: January,2017 - June,2018
     companyduties:
-    - Evolved from a penetration tester to a red teamer.
-    - Assisted on a variety of red teaming and purple teaming engagements.
-    - Automated a variety of tasks and developed internal offensive-security tooling.
-    companylocation: Kolkata, India
-    companyname: Snowflake, Inc.
+    - As part of my role, I conducted automated & manual security assessment of web,
+      infrastructure & IoT applications for shipping & aviation industries.
+    - I led critical time-bound projects with customers to conduct network security
+      assessments using Tenable Security Centre and presented the data to customers
+      to highlight security risks.
+    - Provided best practices knowledge with respect to Qualys' product and develop
+      a rapport with the customers' to be the reliable technical point of contact.
+    companylocation: Pune, India
+    companyname: SecurView Pvt. Ltd.
+  - companydesignation: Technical Support Engineer - Private Cloud Platform (PCP)
+    companyduration: December,2015 - January,2017
+    companyduties:
+    - I assisted to remediate technical issues related to Qualys's vulnerability management
+      module.
+    - I was allocated critical customers' accounts and helped remediate various issues
+      involved with Qualys' Private Cloud Platform.
+    - Provided best practices knowledge with respect to Qualys' product and develop
+      a rapport with the customers' to be the reliable technical point of contact.
+    companylocation: Pune, India
+    companyname: Qualys India Pvt. Ltd.
+  - companydesignation: Technical Solutions Engineer - Media Delivery
+    companyduration: January,2015 - November,2015
+    companyduties:
+    - I was tasked to solve time-bound, challenging issues pertaining to media delivery
+      systems.
+    - I assisted in isolating the root cause of a technical issue & communicated the
+      same to the end customers.
+    - During my tenure in this role, I developed good foundation in Linux operating
+      systems and wrote various scripts to automate everyday tasks using Python and
+      bash.
+    companylocation: Bangalore, India
+    companyname: Akamai India Pvt. Ltd.
+  - companydesignation: Systems Engineer
+    companyduration: August,2012 - October,2014
+    companyduties:
+    - I was part of Juniper Technical Assistance Centre (J-TAC).
+    - I assisted customers with various networking related technical issues involving
+      the Juniper SRX series firewalls.
+    - As part of my internal project, I developed a web application which interacted
+      with lab environment, allowing engineers to reserve devices for a specific time
+      period to replicate customer issues.
+    companylocation: Pune, India
+    companyname: Infosys India Pvt. Ltd.
   version: v0.0.1

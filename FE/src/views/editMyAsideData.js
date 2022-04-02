@@ -16,6 +16,7 @@ module.exports = {
                 m("div", {class: "form-group"}, [
                     m("br"),
                     m("h4","Edit Technical Skills & Certifications"),
+                    m("hr"),
                     m("label.label", myData.resumeAsideData.TechnicalSkills[0].skillName),
                     m("input.input[type=text][placeholder=Skill Value]", {
                         class: "form-control", 

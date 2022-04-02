@@ -85,6 +85,35 @@ var getMyData = {
         .catch(function(e){
             getMyData.saveAsideError = e.code
         })
+    },
+
+    resumeSectionData: {},
+    resumeSectionDataError: "",
+    getMySectionData: function(){
+        return(m.request({
+            method: "GET",
+            url: "http://localhost:8080/getsection",
+            withCredentials: false,
+        }))
+        .then(function(sectionResult){
+            getMyData.resumeSectionData = sectionResult
+        })
+        .catch(function(e){
+            getMyData.resumeSectionDataError = e.code
+        })
+    },
+
+    saveSectionError: "",
+    saveSection: function(){
+        return m.request({
+            method: "POST",
+            url: "http://localhost:8080/updatesection",
+            body: getMyData.resumeSectionData,
+            withCredentials: false,
+        })
+        .catch(function(e){
+            getMyData.saveSectionError = e.code
+        })
     }
 
 }

@@ -14,6 +14,7 @@ module.exports = {
             m("div", {class: "container"}, [
                 m("br"),
                 m("h4", "Edit Your Details"),
+                m("hr"),
                 m("div", {class: "form-group"}, [
                     m("label.label", "Github Link"),
                     m("input.input[type=text][placeholder=Github Link]", {

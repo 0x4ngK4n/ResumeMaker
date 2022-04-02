@@ -13,7 +13,7 @@ module.exports = {
                 m("div", {class: "row"}, [
                     // Header element
                     m("header",{class: "mb-0 pb-0 col-sm-12 bg-primary text-white jumbotron"},[ // Applied the mb pb classes here to trim the margin
-                        m(m.route.Link, {href: "/editHeader", class: "text-dark"}, [
+                        m(m.route.Link, {href: "/editHeader", class: "text-white"}, [
                             m("h1", myData.myDataJson.Name),
                             m("h4", myData.myDataJson.Title),
                             m("hr"),
@@ -41,7 +41,7 @@ module.exports = {
                             m("hr"),
                             myData.myDataJson.TechnicalSkills.map(function(technicalSkill) {
                                 return m("li", {class: "list-unstyled"}, [
-                                    m(m.route.Link, {href: "/editAside", class: "text-dark"}, [
+                                    m(m.route.Link, {href: "/editAside", class: "text-light"}, [
                                         technicalSkill.skillName + ": ",
                                         m("br"),
                                         m("input[type=range]", {class: "form-range", min: "0", max: "10", value: technicalSkill.skillValue}, technicalSkill.skillName ),
@@ -54,7 +54,7 @@ module.exports = {
                             m("hr"),
                             myData.myDataJson.Certifications.map(function(certifications) {
                                 return m("li", {class: "list-unstyled"}, [
-                                    m(m.route.Link, {href: "/editAside", class: "text-dark"}, [
+                                    m(m.route.Link, {href: "/editAside", class: "text-light"}, [
                                         certifications.certificateName,
                                     ]),
                                 ])
@@ -65,15 +65,17 @@ module.exports = {
                     m("section", {class: "col-sm-9 bg-secondary text-white"}, [
                         m("p","Experience"),
                         m("hr"),
-                        myData.myDataJson.Experiences.reverse().map(function(experience) {
+                        myData.myDataJson.Experiences.map(function(experience) {
                             return m("p", [
-                                m("i", {class: "font-weight-bolder"}, experience.companyname + " - " + experience.companyduration),
-                                m("br"),
-                                m("i", {class: "font-weight-bold"}, experience.companydesignation),
-                                m("br"),
-                                m("i", {class: "fa fa-map-marker font-weight-bold"}, " " + experience.companylocation),
-                                m("br"),
-                                m ("p", {class: "lead"}, experience.companyduties),
+                                m(m.route.Link, {href: "/editSection", class: "text-light"}, [
+                                    m("i", {class: "font-weight-bolder"}, experience.companyname + " - " + experience.companyduration),
+                                    m("br"),
+                                    m("i", {class: "font-weight-bold"}, experience.companydesignation),
+                                    m("br"),
+                                    m("i", {class: "fa fa-map-marker font-weight-bold"}, " " + experience.companylocation),
+                                    m("br"),
+                                    m ("p", {class: "lead"}, experience.companyduties),
+                                ]),
                             ])
                         })
                     ]),

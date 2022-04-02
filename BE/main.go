@@ -58,6 +58,10 @@ func main() {
 	r.GET("/getaside", resumemaker.GetAsideData)
 	r.OPTIONS("/updateaside", resumemaker.Preflight)
 	r.POST("/updateaside", resumemaker.UpdateAsideData)
+	//Section element APIs
+	r.GET("/getsection", resumemaker.GetSectionData)
+	r.OPTIONS("/updatesection", resumemaker.Preflight)
+	r.POST("/updatesection", resumemaker.UpdateSectionData)
 
 	r.Run()
 }

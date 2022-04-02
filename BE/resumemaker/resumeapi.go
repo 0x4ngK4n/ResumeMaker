@@ -44,6 +44,10 @@ type resumeAsideData struct {
 	Certifications  []map[string]string      `json: "certifications"`
 }
 
+type resumeSectionData struct {
+	Experiences []map[string]interface{} `json: "experiences"`
+}
+
 const resumeFileName = "resume.yaml"
 
 // Helper Function(s); I am not exporting these
@@ -264,12 +268,57 @@ func UpdateAsideData(c *gin.Context) {
 	c.JSON(http.StatusOK, gin.H{"status": "success"})
 }
 
-func GetSectionData() {
-	//ToDo
+func GetSectionData(c *gin.Context) {
+	var me myData
+	var meSectionData resumeSectionData
+	me, err := unMarshalResume()
+	if err != nil {
+		log.Fatal(err)
+		return
+	}
+	c.Writer.Header().Set("Access-Control-Allow-Origin", "*")
+	c.Writer.Header().Set("Access-Control-Allow-Credentials", "true")
+	c.Writer.Header().Set("Access-Control-Allow-Headers", "Content-Type, Content-Length, Accept-Encoding, X-CSRF-Token, Authorization, accept, origin, Cache-Control, X-Requested-With")
+	c.Writer.Header().Set("Access-Control-Allow-Methods", "POST, OPTIONS, GET")
+
+	meSectionData.Experiences = me.Data.Experiences
+
+	c.JSON(http.StatusOK, meSectionData)
 }
 
-func UpdateSectionData() {
-	//ToDo
+func UpdateSectionData(c *gin.Context) {
+	var me myData
+	var meSectionData resumeSectionData
+
+	me, err := unMarshalResume()
+	if err != nil {
+		log.Fatal(err)
+		return
+	}
+
+	c.Writer.Header().Set("Access-Control-Allow-Origin", "*")
+	c.Writer.Header().Set("Access-Control-Allow-Credentials", "true")
+	c.Writer.Header().Set("Access-Control-Allow-Headers", "Content-Type, Content-Length, Accept-Encoding, X-CSRF-Token, Authorization, accept, origin, Cache-Control, X-Requested-With")
+	c.Writer.Header().Set("Access-Control-Allow-Methods", "POST, OPTIONS, GET")
+	if err := c.BindJSON(&meSectionData); err != nil {
+		c.JSON(http.StatusBadRequest, gin.H{"status": err.Error()})
+		return
+	}
+
+	me.Data.Experiences = meSectionData.Experiences
+
+	updatedResume, err := yaml.Marshal(me)
+	if err != nil {
+		log.Fatal(err)
+	}
+	resumeLocation, err := getResumeLocation()
+	if err != nil {
+		log.Fatal(err)
+	}
+	if err := ioutil.WriteFile(resumeLocation, updatedResume, 0644); err != nil {
+		log.Fatal(err)
+	}
+	c.JSON(http.StatusOK, gin.H{"status": "success"})
 }
 
 func UpdateData(c *gin.Context) {
