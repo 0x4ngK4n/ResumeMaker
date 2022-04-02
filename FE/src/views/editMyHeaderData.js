@@ -12,6 +12,8 @@ module.exports = {
             }
         }, [
             m("div", {class: "container"}, [
+                m("br"),
+                m("h4","Edit Basic Information"),
                 m("div", {class: "form-group"}, [
                     m("label.label", "Name"),
                     m("input.input[type=text][placeholder=Name]", {

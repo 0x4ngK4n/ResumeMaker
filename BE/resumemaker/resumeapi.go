@@ -1,6 +1,7 @@
 package resumemaker
 
 import (
+	"fmt"
 	"io/ioutil"
 	"log"
 	"net/http"
@@ -32,6 +33,15 @@ type resumeHeaderData struct {
 	Name    string `json: "name"`
 	Title   string `json: "title"`
 	AboutMe string `json: "aboutme"`
+}
+
+type resumeNavData struct {
+	Details []map[string]string `json: "details"`
+}
+
+type resumeAsideData struct {
+	TechnicalSkills []map[string]interface{} `json: "technicalskills"`
+	Certifications  []map[string]string      `json: "certifications"`
 }
 
 const resumeFileName = "resume.yaml"
@@ -144,20 +154,114 @@ func UpdateHeaderData(c *gin.Context) {
 
 }
 
-func GetNavData() {
-	//ToDo
+func GetNavData(c *gin.Context) {
+	var me myData
+	var meNavData resumeNavData
+	me, err := unMarshalResume()
+	if err != nil {
+		log.Fatal(err)
+		return
+	}
+	c.Writer.Header().Set("Access-Control-Allow-Origin", "*")
+	c.Writer.Header().Set("Access-Control-Allow-Credentials", "true")
+	c.Writer.Header().Set("Access-Control-Allow-Headers", "Content-Type, Content-Length, Accept-Encoding, X-CSRF-Token, Authorization, accept, origin, Cache-Control, X-Requested-With")
+	c.Writer.Header().Set("Access-Control-Allow-Methods", "POST, OPTIONS, GET")
+
+	meNavData.Details = me.Data.Details
+
+	c.JSON(http.StatusOK, meNavData)
 }
 
-func UpdateNavData() {
+func UpdateNavData(c *gin.Context) {
+	var me myData
+	var meNavData resumeNavData
 
+	me, err := unMarshalResume()
+	if err != nil {
+		log.Fatal(err)
+		return
+	}
+
+	c.Writer.Header().Set("Access-Control-Allow-Origin", "*")
+	c.Writer.Header().Set("Access-Control-Allow-Credentials", "true")
+	c.Writer.Header().Set("Access-Control-Allow-Headers", "Content-Type, Content-Length, Accept-Encoding, X-CSRF-Token, Authorization, accept, origin, Cache-Control, X-Requested-With")
+	c.Writer.Header().Set("Access-Control-Allow-Methods", "POST, OPTIONS, GET")
+	if err := c.BindJSON(&meNavData); err != nil {
+		c.JSON(http.StatusBadRequest, gin.H{"status": err.Error()})
+		return
+	}
+
+	fmt.Println(meNavData.Details)
+	me.Data.Details = meNavData.Details
+
+	updatedResume, err := yaml.Marshal(me)
+	if err != nil {
+		log.Fatal(err)
+	}
+	resumeLocation, err := getResumeLocation()
+	if err != nil {
+		log.Fatal(err)
+	}
+	if err := ioutil.WriteFile(resumeLocation, updatedResume, 0644); err != nil {
+		log.Fatal(err)
+	}
+	c.JSON(http.StatusOK, gin.H{"status": "success"})
 }
 
-func GetAsideData() {
-	//ToDo
+func GetAsideData(c *gin.Context) {
+	var me myData
+	var meAsideData resumeAsideData
+	me, err := unMarshalResume()
+	if err != nil {
+		log.Fatal(err)
+		return
+	}
+	c.Writer.Header().Set("Access-Control-Allow-Origin", "*")
+	c.Writer.Header().Set("Access-Control-Allow-Credentials", "true")
+	c.Writer.Header().Set("Access-Control-Allow-Headers", "Content-Type, Content-Length, Accept-Encoding, X-CSRF-Token, Authorization, accept, origin, Cache-Control, X-Requested-With")
+	c.Writer.Header().Set("Access-Control-Allow-Methods", "POST, OPTIONS, GET")
+
+	meAsideData.TechnicalSkills = me.Data.TechnicalSkills
+	meAsideData.Certifications = me.Data.Certifications
+
+	c.JSON(http.StatusOK, meAsideData)
+	//c.JSON(http.StatusForbidden, "forbidden")
 }
 
-func UpdateAsideData() {
-	//ToDo
+func UpdateAsideData(c *gin.Context) {
+	var me myData
+	var meAsideData resumeAsideData
+
+	me, err := unMarshalResume()
+	if err != nil {
+		log.Fatal(err)
+		return
+	}
+
+	c.Writer.Header().Set("Access-Control-Allow-Origin", "*")
+	c.Writer.Header().Set("Access-Control-Allow-Credentials", "true")
+	c.Writer.Header().Set("Access-Control-Allow-Headers", "Content-Type, Content-Length, Accept-Encoding, X-CSRF-Token, Authorization, accept, origin, Cache-Control, X-Requested-With")
+	c.Writer.Header().Set("Access-Control-Allow-Methods", "POST, OPTIONS, GET")
+	if err := c.BindJSON(&meAsideData); err != nil {
+		c.JSON(http.StatusBadRequest, gin.H{"status": err.Error()})
+		return
+	}
+
+	me.Data.TechnicalSkills = meAsideData.TechnicalSkills
+	me.Data.Certifications = meAsideData.Certifications
+
+	updatedResume, err := yaml.Marshal(me)
+	if err != nil {
+		log.Fatal(err)
+	}
+	resumeLocation, err := getResumeLocation()
+	if err != nil {
+		log.Fatal(err)
+	}
+	if err := ioutil.WriteFile(resumeLocation, updatedResume, 0644); err != nil {
+		log.Fatal(err)
+	}
+	c.JSON(http.StatusOK, gin.H{"status": "success"})
 }
 
 func GetSectionData() {

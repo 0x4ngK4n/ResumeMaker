@@ -21,11 +21,11 @@ data:
   - skillName: Infrastructure Assessments
     skillValue: 5
   - skillName: Mobile Assessments
-    skillValue: 5
+    skillValue: "5"
   - skillName: Source Code Analysis
     skillValue: 5
   - skillName: Reverse Enginnering
-    skillValue: 3
+    skillValue: "3"
   certifications:
   - certificateName: OSCP
   - certificateName: AWS

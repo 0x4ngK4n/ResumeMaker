@@ -24,24 +24,28 @@ module.exports = {
                 m("div", {class: "pt-2 pb-2 row justify-content-center bg-warning text-white"}, [
                     // Nav element
                     m("nav", {class: "col-sm-12 navbar-nav navbar-expand-sm"}, [
-                        myData.myDataJson.Details.map(function(detail) {
-                            return m("li", {class: "col-sm-3 text-center nav-item"}, [ 
-                                m("a", {class: detail.detailIcon, href: detail.detailHref}, " " + detail.detailValue) 
-                            ]);
-                        }),
+                            myData.myDataJson.Details.map(function(detail) {
+                                return m("li", {class: "col-sm-3 text-center nav-item"}, [
+                                    m(m.route.Link ,{href: "/editNav", class: "text-dark"} ,[
+                                        m("a", {class: detail.detailIcon, href: detail.detailHref}, " " + detail.detailValue)
+                                    ]),
+                                ]);
+                            }),
                     ]),
                 ]),
                 m("div", {class: "row"}, [
-                    // Aside element for skills
+                    // Aside element for skills and certifications
                     m("aside", {class: "col-sm-3 bg-info text-white"}, [
                         m("ul", [
                             m("p", {class: "font-weight-bold"}, "Key Skills"),
                             m("hr"),
                             myData.myDataJson.TechnicalSkills.map(function(technicalSkill) {
                                 return m("li", {class: "list-unstyled"}, [
-                                    technicalSkill.skillName + ": ",
-                                    m("br"),
-                                    m("input[type=range]", {class: "form-range", min: "0", max: "10", value: technicalSkill.skillValue}, technicalSkill.skillName ),
+                                    m(m.route.Link, {href: "/editAside", class: "text-dark"}, [
+                                        technicalSkill.skillName + ": ",
+                                        m("br"),
+                                        m("input[type=range]", {class: "form-range", min: "0", max: "10", value: technicalSkill.skillValue}, technicalSkill.skillName ),
+                                    ]),
                                 ])
                             }),
                             m("br"),
@@ -50,7 +54,9 @@ module.exports = {
                             m("hr"),
                             myData.myDataJson.Certifications.map(function(certifications) {
                                 return m("li", {class: "list-unstyled"}, [
-                                    certifications.certificateName,
+                                    m(m.route.Link, {href: "/editAside", class: "text-dark"}, [
+                                        certifications.certificateName,
+                                    ]),
                                 ])
                             }),
                         ]),
