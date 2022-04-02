@@ -51,8 +51,8 @@ module.exports = {
                                 value: experience.companylocation,
                             }),
 
-                            m("label.label", "Test Company Duties"),
-                            m("textarea[placeholder=Company Duties]", {
+                            m("label.label", "Company Duties"),
+                            m("textarea[rows=5][placeholder=Company Duties]", {
                                 class: "form-control", 
                                 oninput: function(e) {
                                     experience.companyduties = e.target.value

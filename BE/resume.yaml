@@ -87,13 +87,11 @@ data:
     companyname: Akamai India Pvt. Ltd.
   - companydesignation: Systems Engineer
     companyduration: August,2012 - October,2014
-    companyduties:
-    - I was part of Juniper Technical Assistance Centre (J-TAC).
-    - I assisted customers with various networking related technical issues involving
-      the Juniper SRX series firewalls.
-    - As part of my internal project, I developed a web application which interacted
-      with lab environment, allowing engineers to reserve devices for a specific time
-      period to replicate customer issues.
+    companyduties: I was part of Juniper Technical Assistance Centre (J-TAC). I assisted
+      customers with various networking related technical issues involving the Juniper
+      SRX series firewalls.,As part of my internal project, I developed a web application
+      which interacted with lab environment, allowing engineers to reserve devices
+      for a specific time period to replicate customer issues.
     companylocation: Pune, India
     companyname: Infosys India Pvt. Ltd.
   version: v0.0.1
