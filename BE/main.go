@@ -37,11 +37,11 @@ func openbrowser(url string) {
 func main() {
 	r := gin.Default()
 
-	//exec.Command("cd", "../FE")
-	//exec.Command("npm", "start")
+	exec.Command("cd", "../FE")
+	exec.Command("npm", "start")
 
-	//go echoServer()
-	//go openbrowser("http://127.0.0.1:1323/")
+	go echoServer()
+	go openbrowser("http://127.0.0.1:1323/")
 
 	r.GET("/getdata", resumemaker.GetData)
 	r.POST("/updatedata", resumemaker.UpdateData)
